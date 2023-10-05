@@ -21,6 +21,6 @@ extension SplashViewModel: SplashViewModelProtocol {
         
         // GET DATA - SpaceX
         
-        // Navigate to home
+        viewDelegate?.navigateToHome()
     }
 }

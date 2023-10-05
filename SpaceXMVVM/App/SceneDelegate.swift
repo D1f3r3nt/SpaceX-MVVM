@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Referencia de pantalla
         let viewController = SplashViewController()
+        viewController.viewModel = SplashViewModel(viewDelegate: viewController)
         
         // Referencia NavigationControllera
         let navController = UINavigationController(rootViewController: viewController)

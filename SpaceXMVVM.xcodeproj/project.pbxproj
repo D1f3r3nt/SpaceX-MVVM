@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1515B22ACED518009BAA59 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515B02ACED518009BAA59 /* HomeTableViewController.swift */; };
+		1D1515B32ACED518009BAA59 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D1515B12ACED518009BAA59 /* HomeTableViewController.xib */; };
+		1D1515B52ACED579009BAA59 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515B42ACED579009BAA59 /* HomeTableViewModel.swift */; };
+		1D1515B92ACED800009BAA59 /* SpaceXCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515B82ACED800009BAA59 /* SpaceXCall.swift */; };
+		1D1515BD2ACEDCBE009BAA59 /* MissionDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515BC2ACEDCBE009BAA59 /* MissionDto.swift */; };
 		1DC8D6B72ACEC5E400D08798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */; };
 		1DC8D6B92ACEC5E400D08798 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */; };
 		1DC8D6C02ACEC5E700D08798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8D6BF2ACEC5E700D08798 /* Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D1515B02ACED518009BAA59 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		1D1515B12ACED518009BAA59 /* HomeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
+		1D1515B42ACED579009BAA59 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
+		1D1515B82ACED800009BAA59 /* SpaceXCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXCall.swift; sourceTree = "<group>"; };
+		1D1515BC2ACEDCBE009BAA59 /* MissionDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDto.swift; sourceTree = "<group>"; };
 		1DC8D6B32ACEC5E400D08798 /* SpaceXMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +49,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D1515AF2ACED502009BAA59 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1D1515B02ACED518009BAA59 /* HomeTableViewController.swift */,
+				1D1515B12ACED518009BAA59 /* HomeTableViewController.xib */,
+				1D1515B42ACED579009BAA59 /* HomeTableViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1D1515B62ACED760009BAA59 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1D1515BA2ACEDCA9009BAA59 /* Models */,
+				1D1515B72ACED76E009BAA59 /* Api */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1D1515B72ACED76E009BAA59 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				1D1515B82ACED800009BAA59 /* SpaceXCall.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		1D1515BA2ACEDCA9009BAA59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D1515BB2ACEDCB0009BAA59 /* Dto */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1D1515BB2ACEDCB0009BAA59 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				1D1515BC2ACEDCBE009BAA59 /* MissionDto.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
 		1DC8D6AA2ACEC5E400D08798 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +111,7 @@
 		1DC8D6B52ACEC5E400D08798 /* SpaceXMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				1D1515B62ACED760009BAA59 /* Domain */,
 				1DC8D6CB2ACEC75600D08798 /* Resources */,
 				1DC8D6CA2ACEC6F500D08798 /* App */,
 				1DC8D6CC2ACEC76900D08798 /* UI */,
@@ -86,6 +140,7 @@
 		1DC8D6CC2ACEC76900D08798 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1D1515AF2ACED502009BAA59 /* Home */,
 				1DC8D6CD2ACEC76F00D08798 /* Splash */,
 			);
 			path = UI;
@@ -184,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1515B32ACED518009BAA59 /* HomeTableViewController.xib in Resources */,
 				1DC8D6C32ACEC5E700D08798 /* LaunchScreen.storyboard in Resources */,
 				1DC8D6D12ACECA9800D08798 /* SplashViewController.xib in Resources */,
 				1DC8D6C02ACEC5E700D08798 /* Assets.xcassets in Resources */,
@@ -201,6 +257,10 @@
 				1DC8D6B72ACEC5E400D08798 /* AppDelegate.swift in Sources */,
 				1DC8D6B92ACEC5E400D08798 /* SceneDelegate.swift in Sources */,
 				1DC8D6D62ACECCE200D08798 /* SplashViewModel.swift in Sources */,
+				1D1515BD2ACEDCBE009BAA59 /* MissionDto.swift in Sources */,
+				1D1515B52ACED579009BAA59 /* HomeTableViewModel.swift in Sources */,
+				1D1515B92ACED800009BAA59 /* SpaceXCall.swift in Sources */,
+				1D1515B22ACED518009BAA59 /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
