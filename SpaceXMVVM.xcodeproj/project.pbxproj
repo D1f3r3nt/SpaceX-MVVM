@@ -12,6 +12,8 @@
 		1D1515B52ACED579009BAA59 /* HomeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515B42ACED579009BAA59 /* HomeTableViewModel.swift */; };
 		1D1515B92ACED800009BAA59 /* SpaceXCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515B82ACED800009BAA59 /* SpaceXCall.swift */; };
 		1D1515BD2ACEDCBE009BAA59 /* MissionDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515BC2ACEDCBE009BAA59 /* MissionDto.swift */; };
+		1D1515BF2ACEF23D009BAA59 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515BE2ACEF23D009BAA59 /* Mission.swift */; };
+		1D1515C22ACEF457009BAA59 /* MissionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515C12ACEF457009BAA59 /* MissionMapper.swift */; };
 		1DC8D6B72ACEC5E400D08798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */; };
 		1DC8D6B92ACEC5E400D08798 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */; };
 		1DC8D6C02ACEC5E700D08798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8D6BF2ACEC5E700D08798 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 		1D1515B42ACED579009BAA59 /* HomeTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewModel.swift; sourceTree = "<group>"; };
 		1D1515B82ACED800009BAA59 /* SpaceXCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXCall.swift; sourceTree = "<group>"; };
 		1D1515BC2ACEDCBE009BAA59 /* MissionDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDto.swift; sourceTree = "<group>"; };
+		1D1515BE2ACEF23D009BAA59 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		1D1515C12ACEF457009BAA59 /* MissionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapper.swift; sourceTree = "<group>"; };
 		1DC8D6B32ACEC5E400D08798 /* SpaceXMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 		1D1515B62ACED760009BAA59 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				1D1515C02ACEF446009BAA59 /* Mappers */,
 				1D1515BA2ACEDCA9009BAA59 /* Models */,
 				1D1515B72ACED76E009BAA59 /* Api */,
 			);
@@ -80,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1D1515BB2ACEDCB0009BAA59 /* Dto */,
+				1D1515BE2ACEF23D009BAA59 /* Mission.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +96,14 @@
 				1D1515BC2ACEDCBE009BAA59 /* MissionDto.swift */,
 			);
 			path = Dto;
+			sourceTree = "<group>";
+		};
+		1D1515C02ACEF446009BAA59 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				1D1515C12ACEF457009BAA59 /* MissionMapper.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 		1DC8D6AA2ACEC5E400D08798 = {
@@ -258,7 +272,9 @@
 				1DC8D6B92ACEC5E400D08798 /* SceneDelegate.swift in Sources */,
 				1DC8D6D62ACECCE200D08798 /* SplashViewModel.swift in Sources */,
 				1D1515BD2ACEDCBE009BAA59 /* MissionDto.swift in Sources */,
+				1D1515C22ACEF457009BAA59 /* MissionMapper.swift in Sources */,
 				1D1515B52ACED579009BAA59 /* HomeTableViewModel.swift in Sources */,
+				1D1515BF2ACEF23D009BAA59 /* Mission.swift in Sources */,
 				1D1515B92ACED800009BAA59 /* SpaceXCall.swift in Sources */,
 				1D1515B22ACED518009BAA59 /* HomeTableViewController.swift in Sources */,
 			);

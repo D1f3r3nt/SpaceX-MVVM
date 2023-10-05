@@ -3,7 +3,7 @@ import UIKit
 //MARK: - Protocol
 protocol SplashViewControllerProtocol: AnyObject {
     func startLoading()
-    func navigateToHome()
+    func navigateToHome(_ missions: [Mission])
 }
 
 // MARK: - Class
@@ -33,9 +33,12 @@ extension SplashViewController: SplashViewControllerProtocol {
         }
     }
     
-    func navigateToHome() {
+    func navigateToHome(_ missions: [Mission]) {
         let homeController = HomeTableViewController()
-        homeController.viewModel = HomeTableViewModel(viewDelegate: homeController)
+        homeController.viewModel = HomeTableViewModel(
+            viewDelegate: homeController,
+            missions: missions
+        )
         
         navigationController?.setViewControllers([homeController], animated: true)
     }

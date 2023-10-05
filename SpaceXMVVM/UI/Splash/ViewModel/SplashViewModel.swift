@@ -19,10 +19,14 @@ extension SplashViewModel: SplashViewModelProtocol {
     func handleViewDidLoad() {
         viewDelegate?.startLoading()
         
-        SpaceXCall().getMissions { result in
-            print(result)
+        SpaceXCall().getMissions { [weak self] result in
+            guard case .success(let missions) = result else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                self?.viewDelegate?.navigateToHome(missions)
+            }
         }
-        
-        //viewDelegate?.navigateToHome()
     }
 }

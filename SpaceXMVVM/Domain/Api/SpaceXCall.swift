@@ -12,7 +12,7 @@ final class SpaceXCall {
     
     // MARK: - Get Missions
     func getMissions(
-        completion: @escaping (Result<[MissionDto], NetworkError>) -> Void
+        completion: @escaping (Result<[Mission], NetworkError>) -> Void
     ) {
         
         var component = baseComponents
@@ -50,7 +50,16 @@ final class SpaceXCall {
                 return
             }
             
-            completion(.success(resource))
+            let historyMissionsDto = resource.filter { mission in
+                guard let near = mission.upcoming else {
+                    return false
+                }
+                return !near
+            }
+            
+            let missions = MissionMapper.convertListDto(missionsDto: historyMissionsDto.reversed())
+            
+            completion(.success(missions))
         }
         
         task.resume()
