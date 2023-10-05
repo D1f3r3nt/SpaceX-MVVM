@@ -5,7 +5,7 @@ final class MissionMapper {
         return Mission(
             patch: missionDto.links?.patch?.small,
             video: missionDto.links?.webcast,
-            date: missionDto.staticFireDateUTC ?? "No data",
+            date: missionDto.dateUTC ?? "No data",
             rocketId: missionDto.rocket,
             succes: missionDto.success ?? false,
             failure: missionDto.failures?.count == 0 ? nil : missionDto.failures![0].reason,

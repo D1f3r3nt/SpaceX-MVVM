@@ -3,6 +3,8 @@ import Foundation
 //MARK: - Protocol
 protocol HomeTableViewModelProtocol{
     func handleViewDidLoad()
+    func missionSize() -> Int
+    func missionIn(_ index: Int) -> Mission
 }
 
 //MARK: - Class
@@ -21,7 +23,14 @@ final class HomeTableViewModel {
 
 //MARK: - Extension
 extension HomeTableViewModel: HomeTableViewModelProtocol {
+    func missionSize() -> Int {
+        self.missions.count
+    }
+    
+    func missionIn(_ index: Int) -> Mission {
+        self.missions[index]
+    }
+    
     func handleViewDidLoad() {
-        print(self.missions)
     }
 }
