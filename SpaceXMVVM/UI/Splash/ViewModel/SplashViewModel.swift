@@ -19,8 +19,10 @@ extension SplashViewModel: SplashViewModelProtocol {
     func handleViewDidLoad() {
         viewDelegate?.startLoading()
         
-        // GET DATA - SpaceX
+        SpaceXCall().getMissions { result in
+            print(result)
+        }
         
-        viewDelegate?.navigateToHome()
+        //viewDelegate?.navigateToHome()
     }
 }

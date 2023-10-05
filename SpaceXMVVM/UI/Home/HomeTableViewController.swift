@@ -1,6 +1,6 @@
 import UIKit
 //MARK: - Protocol
-protocol HomeTableViewControllerProtocol {
+protocol HomeTableViewControllerProtocol: AnyObject {
     
 }
 

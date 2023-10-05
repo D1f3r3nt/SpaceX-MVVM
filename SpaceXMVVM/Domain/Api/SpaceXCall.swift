@@ -11,8 +11,8 @@ final class SpaceXCall {
     }
     
     // MARK: - Get Missions
-    func login(
-        completion: @escaping (Result<String, NetworkError>) -> Void
+    func getMissions(
+        completion: @escaping (Result<[MissionDto], NetworkError>) -> Void
     ) {
         
         var component = baseComponents
@@ -26,7 +26,7 @@ final class SpaceXCall {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        let task = session.dataTask(with: request) { [weak self] data, response, error in
+        let task = session.dataTask(with: request) { data, response, error in
             guard error == nil else {
                 completion(.failure(.unknown))
                 return
@@ -45,7 +45,12 @@ final class SpaceXCall {
                 return
             }
             
+            guard let resource = try? JSONDecoder().decode([MissionDto].self, from: data) else {
+                completion(.failure(.decodingFailed))
+                return
+            }
             
+            completion(.success(resource))
         }
         
         task.resume()
