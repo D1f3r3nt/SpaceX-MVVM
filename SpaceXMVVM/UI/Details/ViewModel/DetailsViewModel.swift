@@ -1,7 +1,9 @@
 import Foundation
+import SafariServices
 
 protocol DetailsViewModelProtocol {
     func handleLoadData()
+    func openVideo() -> SFSafariViewController?
 }
 
 final class DetaislViewModel {
@@ -20,5 +22,18 @@ final class DetaislViewModel {
 extension DetaislViewModel: DetailsViewModelProtocol {
     func handleLoadData() {
         self.viewDelegate?.updateValues(with: mission)
+    }
+    
+    func openVideo() -> SFSafariViewController? {
+        guard let video = self.mission.video else {
+            return nil
+        }
+        
+        guard let url = URL(string: video) else {
+            return nil
+        }
+        
+        let safariaView = SFSafariViewController(url: url)
+        return safariaView
     }
 }

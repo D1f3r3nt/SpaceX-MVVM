@@ -28,6 +28,12 @@ class DetailsViewController: UIViewController {
     }
 
     @IBAction func didTapVideo(_ sender: Any) {
+        guard let safari = self.viewModel?.openVideo() else {
+            // Posible notificar ???
+            return
+        }
+        
+        present(safari, animated: true, completion: nil)
     }
     
     @IBAction func didTapRocket(_ sender: Any) {
