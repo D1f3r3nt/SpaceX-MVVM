@@ -24,5 +24,6 @@ class HomeTableViewCell: UITableViewCell {
         nameLabel.text = mission.name
         dateLabel.text = formattedDate
         successLabel.text = mission.succes ? "Success" : "Failed"
+        successLabel.textColor = mission.succes ? .green : .red
     }
 }

@@ -16,6 +16,10 @@
 		1D1515C22ACEF457009BAA59 /* MissionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515C12ACEF457009BAA59 /* MissionMapper.swift */; };
 		1D1515C92ACEFB6C009BAA59 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1515C72ACEFB6C009BAA59 /* HomeTableViewCell.swift */; };
 		1D1515CA2ACEFB6C009BAA59 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D1515C82ACEFB6C009BAA59 /* HomeTableViewCell.xib */; };
+		1D3CD3792AD00FC800A333C9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CD3772AD00FC800A333C9 /* DetailsViewController.swift */; };
+		1D3CD37A2AD00FC800A333C9 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CD3782AD00FC800A333C9 /* DetailsViewController.xib */; };
+		1D3CD37C2AD01ED900A333C9 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CD37B2AD01ED900A333C9 /* DetailsViewModel.swift */; };
+		1D3CD3822AD0212500A333C9 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CD3812AD0212500A333C9 /* ImageExtension.swift */; };
 		1DC8D6B72ACEC5E400D08798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */; };
 		1DC8D6B92ACEC5E400D08798 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */; };
 		1DC8D6C02ACEC5E700D08798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8D6BF2ACEC5E700D08798 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 		1D1515C12ACEF457009BAA59 /* MissionMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionMapper.swift; sourceTree = "<group>"; };
 		1D1515C72ACEFB6C009BAA59 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1D1515C82ACEFB6C009BAA59 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		1D3CD3772AD00FC800A333C9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		1D3CD3782AD00FC800A333C9 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		1D3CD37B2AD01ED900A333C9 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		1D3CD3812AD0212500A333C9 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		1DC8D6B32ACEC5E400D08798 /* SpaceXMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +152,48 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		1D3CD3762AD00FA300A333C9 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CD37F2AD0202500A333C9 /* Controller */,
+				1D3CD37E2AD0201F00A333C9 /* ViewModel */,
+				1D3CD37D2AD0201A00A333C9 /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		1D3CD37D2AD0201A00A333C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CD3782AD00FC800A333C9 /* DetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D3CD37E2AD0201F00A333C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CD37B2AD01ED900A333C9 /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D3CD37F2AD0202500A333C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CD3772AD00FC800A333C9 /* DetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D3CD3802AD0211400A333C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D3CD3812AD0212500A333C9 /* ImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1DC8D6AA2ACEC5E400D08798 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +225,7 @@
 		1DC8D6CA2ACEC6F500D08798 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1D3CD3802AD0211400A333C9 /* Extensions */,
 				1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */,
 				1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */,
 			);
@@ -192,6 +243,7 @@
 		1DC8D6CC2ACEC76900D08798 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1D3CD3762AD00FA300A333C9 /* Details */,
 				1D1515AF2ACED502009BAA59 /* Home */,
 				1DC8D6CD2ACEC76F00D08798 /* Splash */,
 			);
@@ -296,6 +348,7 @@
 				1DC8D6D12ACECA9800D08798 /* SplashViewController.xib in Resources */,
 				1D1515CA2ACEFB6C009BAA59 /* HomeTableViewCell.xib in Resources */,
 				1DC8D6C02ACEC5E700D08798 /* Assets.xcassets in Resources */,
+				1D3CD37A2AD00FC800A333C9 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +362,9 @@
 				1DC8D6D02ACECA9800D08798 /* SplashViewController.swift in Sources */,
 				1DC8D6B72ACEC5E400D08798 /* AppDelegate.swift in Sources */,
 				1DC8D6B92ACEC5E400D08798 /* SceneDelegate.swift in Sources */,
+				1D3CD3822AD0212500A333C9 /* ImageExtension.swift in Sources */,
 				1DC8D6D62ACECCE200D08798 /* SplashViewModel.swift in Sources */,
+				1D3CD37C2AD01ED900A333C9 /* DetailsViewModel.swift in Sources */,
 				1D1515BD2ACEDCBE009BAA59 /* MissionDto.swift in Sources */,
 				1D1515C92ACEFB6C009BAA59 /* HomeTableViewCell.swift in Sources */,
 				1D1515C22ACEF457009BAA59 /* MissionMapper.swift in Sources */,
@@ -317,6 +372,7 @@
 				1D1515BF2ACEF23D009BAA59 /* Mission.swift in Sources */,
 				1D1515B92ACED800009BAA59 /* SpaceXCall.swift in Sources */,
 				1D1515B22ACED518009BAA59 /* HomeTableViewController.swift in Sources */,
+				1D3CD3792AD00FC800A333C9 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

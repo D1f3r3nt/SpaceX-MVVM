@@ -1,7 +1,7 @@
 import UIKit
 //MARK: - Protocol
 protocol HomeTableViewControllerProtocol: AnyObject {
-    
+    func navigateToDetails(mission: Mission)
 }
 
 //MARK: - Class
@@ -11,7 +11,10 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.handleViewDidLoad()
+        // Cambiamos color de header
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationController?.navigationBar.barTintColor = .black
         title = "Missions"
         
         self.tableView.register(
@@ -45,9 +48,18 @@ class HomeTableViewController: UITableViewController {
         cell.configure(viewModel.missionIn(indexPath.row))
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        self.viewModel?.handleTapRow(at: indexPath.row)
+    }
 }
 
 //MARK: - Extension
 extension HomeTableViewController: HomeTableViewControllerProtocol {
-    
+    func navigateToDetails(mission: Mission) {
+        let detailController = DetailsViewController()
+        detailController.viewModel = DetaislViewModel(viewDelegate: detailController, mission: mission)
+        self.navigationController?.pushViewController(detailController, animated: true)
+    }
 }
