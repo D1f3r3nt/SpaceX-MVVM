@@ -4,6 +4,7 @@ import SafariServices
 protocol DetailsViewModelProtocol {
     func handleLoadData()
     func openVideo() -> SFSafariViewController?
+    func handleLoadRocket()
 }
 
 final class DetaislViewModel {
@@ -20,6 +21,22 @@ final class DetaislViewModel {
 }
 
 extension DetaislViewModel: DetailsViewModelProtocol {
+    func handleLoadRocket() {
+        guard let rocket = mission.rocketId else {
+            return
+        }
+        
+        SpaceXCall().getRocket(rocketId: rocket) { [weak self] result in
+            guard case .success(let rocket) = result else {
+                return
+            }
+
+            DispatchQueue.main.async {
+                self?.viewDelegate?.navigateToRocket(with: rocket)
+            }
+        }
+    }
+    
     func handleLoadData() {
         self.viewDelegate?.updateValues(with: mission)
     }

@@ -2,6 +2,7 @@ import UIKit
 
 protocol DetailsViewControllerProtocol: AnyObject {
     func updateValues(with mission: Mission)
+    func navigateToRocket(with rocket: Rocket)
 }
 
 class DetailsViewController: UIViewController {
@@ -29,7 +30,6 @@ class DetailsViewController: UIViewController {
 
     @IBAction func didTapVideo(_ sender: Any) {
         guard let safari = self.viewModel?.openVideo() else {
-            // Posible notificar ???
             return
         }
         
@@ -37,14 +37,23 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func didTapRocket(_ sender: Any) {
+        self.viewModel?.handleLoadRocket()
     }
 }
 
 extension DetailsViewController: DetailsViewControllerProtocol {
+    func navigateToRocket(with rocket: Rocket) {
+        let rocketView = RocketViewController()
+        rocketView.viewModel = RocketViewModel(viewDelegate: rocketView, rocket: rocket)
+        
+        self.navigationController?.pushViewController(rocketView, animated: true)
+    }
+    
     func updateValues(with mission: Mission) {
         let formattedDate: String = String(mission.date.split(separator: "T")[0])
         
         codeLabel.text = "#\(mission.flightNumber)"
+        title = "#\(mission.flightNumber)"
         nameLabel.text = mission.name
         dateLabel.text = formattedDate
         succesLabel.text = mission.succes ? "Success" : "Failed"

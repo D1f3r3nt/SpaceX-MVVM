@@ -20,6 +20,12 @@
 		1D3CD37A2AD00FC800A333C9 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D3CD3782AD00FC800A333C9 /* DetailsViewController.xib */; };
 		1D3CD37C2AD01ED900A333C9 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CD37B2AD01ED900A333C9 /* DetailsViewModel.swift */; };
 		1D3CD3822AD0212500A333C9 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3CD3812AD0212500A333C9 /* ImageExtension.swift */; };
+		1DBE67382AD09E44002B1ED8 /* RocketDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBE67372AD09E44002B1ED8 /* RocketDto.swift */; };
+		1DBE673A2AD09F5C002B1ED8 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBE67392AD09F5C002B1ED8 /* Rocket.swift */; };
+		1DBE673C2AD0A003002B1ED8 /* RocketMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBE673B2AD0A003002B1ED8 /* RocketMapper.swift */; };
+		1DBE67402AD0A29B002B1ED8 /* RocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBE673E2AD0A29B002B1ED8 /* RocketViewController.swift */; };
+		1DBE67412AD0A29B002B1ED8 /* RocketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DBE673F2AD0A29B002B1ED8 /* RocketViewController.xib */; };
+		1DBE67462AD0AA70002B1ED8 /* RocketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBE67452AD0AA70002B1ED8 /* RocketViewModel.swift */; };
 		1DC8D6B72ACEC5E400D08798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */; };
 		1DC8D6B92ACEC5E400D08798 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */; };
 		1DC8D6C02ACEC5E700D08798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC8D6BF2ACEC5E700D08798 /* Assets.xcassets */; };
@@ -43,6 +49,12 @@
 		1D3CD3782AD00FC800A333C9 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		1D3CD37B2AD01ED900A333C9 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		1D3CD3812AD0212500A333C9 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		1DBE67372AD09E44002B1ED8 /* RocketDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDto.swift; sourceTree = "<group>"; };
+		1DBE67392AD09F5C002B1ED8 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		1DBE673B2AD0A003002B1ED8 /* RocketMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketMapper.swift; sourceTree = "<group>"; };
+		1DBE673E2AD0A29B002B1ED8 /* RocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewController.swift; sourceTree = "<group>"; };
+		1DBE673F2AD0A29B002B1ED8 /* RocketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketViewController.xib; sourceTree = "<group>"; };
+		1DBE67452AD0AA70002B1ED8 /* RocketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewModel.swift; sourceTree = "<group>"; };
 		1DC8D6B32ACEC5E400D08798 /* SpaceXMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC8D6B62ACEC5E400D08798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC8D6B82ACEC5E400D08798 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +111,7 @@
 			children = (
 				1D1515BB2ACEDCB0009BAA59 /* Dto */,
 				1D1515BE2ACEF23D009BAA59 /* Mission.swift */,
+				1DBE67392AD09F5C002B1ED8 /* Rocket.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				1D1515BC2ACEDCBE009BAA59 /* MissionDto.swift */,
+				1DBE67372AD09E44002B1ED8 /* RocketDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -115,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				1D1515C12ACEF457009BAA59 /* MissionMapper.swift */,
+				1DBE673B2AD0A003002B1ED8 /* RocketMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -194,6 +209,40 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1DBE673D2AD0A27E002B1ED8 /* Rocket */ = {
+			isa = PBXGroup;
+			children = (
+				1DBE67442AD0AA53002B1ED8 /* Controller */,
+				1DBE67432AD0AA4C002B1ED8 /* ViewModel */,
+				1DBE67422AD0AA46002B1ED8 /* View */,
+			);
+			path = Rocket;
+			sourceTree = "<group>";
+		};
+		1DBE67422AD0AA46002B1ED8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DBE673F2AD0A29B002B1ED8 /* RocketViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DBE67432AD0AA4C002B1ED8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DBE67452AD0AA70002B1ED8 /* RocketViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DBE67442AD0AA53002B1ED8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1DBE673E2AD0A29B002B1ED8 /* RocketViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1DC8D6AA2ACEC5E400D08798 = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +292,7 @@
 		1DC8D6CC2ACEC76900D08798 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1DBE673D2AD0A27E002B1ED8 /* Rocket */,
 				1D3CD3762AD00FA300A333C9 /* Details */,
 				1D1515AF2ACED502009BAA59 /* Home */,
 				1DC8D6CD2ACEC76F00D08798 /* Splash */,
@@ -344,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D1515B32ACED518009BAA59 /* HomeTableViewController.xib in Resources */,
+				1DBE67412AD0A29B002B1ED8 /* RocketViewController.xib in Resources */,
 				1DC8D6C32ACEC5E700D08798 /* LaunchScreen.storyboard in Resources */,
 				1DC8D6D12ACECA9800D08798 /* SplashViewController.xib in Resources */,
 				1D1515CA2ACEFB6C009BAA59 /* HomeTableViewCell.xib in Resources */,
@@ -366,13 +417,18 @@
 				1DC8D6D62ACECCE200D08798 /* SplashViewModel.swift in Sources */,
 				1D3CD37C2AD01ED900A333C9 /* DetailsViewModel.swift in Sources */,
 				1D1515BD2ACEDCBE009BAA59 /* MissionDto.swift in Sources */,
+				1DBE67462AD0AA70002B1ED8 /* RocketViewModel.swift in Sources */,
 				1D1515C92ACEFB6C009BAA59 /* HomeTableViewCell.swift in Sources */,
 				1D1515C22ACEF457009BAA59 /* MissionMapper.swift in Sources */,
+				1DBE673C2AD0A003002B1ED8 /* RocketMapper.swift in Sources */,
 				1D1515B52ACED579009BAA59 /* HomeTableViewModel.swift in Sources */,
 				1D1515BF2ACEF23D009BAA59 /* Mission.swift in Sources */,
+				1DBE67382AD09E44002B1ED8 /* RocketDto.swift in Sources */,
 				1D1515B92ACED800009BAA59 /* SpaceXCall.swift in Sources */,
+				1DBE67402AD0A29B002B1ED8 /* RocketViewController.swift in Sources */,
 				1D1515B22ACED518009BAA59 /* HomeTableViewController.swift in Sources */,
 				1D3CD3792AD00FC800A333C9 /* DetailsViewController.swift in Sources */,
+				1DBE673A2AD09F5C002B1ED8 /* Rocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
