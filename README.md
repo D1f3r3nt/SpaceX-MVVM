@@ -1,17 +1,11 @@
-# AppPatronesMarcSantisteban
-Pido perdon, no me fije en que habia un nombre para el proyecto y me he dado cuenta al momento de entregarlo, espero que no importe
+# SpaceX MVVM
 
-## App
-La app esta hecha con MVVM y con la tematica de Space X, hay 4 pantallas Splash, Misiones (simula Heroes), Detalle, Cohete (simula Transformaciones)
+For this project we have used already known techniques such as Xibs for interface design, 
+but the main objective of this project was to practice the MVVM architecture.
 
-## Extras
-Los extras para esta aplicacion han sido:
-* Llamadas reales a la API oficial de Space X
-* Uso de mappers y DTO's (propios, sin librerias externas)
-* Un total de 4 pantallas
-* Abrir enlace en safari (Youtube y Wikipedia)
+This iOS application is an application to display information about the missions performed by SpaceX, 
+this information is extracted from a SpaceX API. It consists of four screens: A Splash screen, the main mission screen (a listing),
+the mission detail screen and from this screen you can navigate to another screen where you can see the information of the rocket that was used.
 
-Obviamente se han asolido todos los requisitos basicos.
-
-En caso de cualquier duda no dudes en contactarme.
-santistebanmarc@gmail.com
+This application also has mappers and DTO's, for the management of the information and also has a logic to open links in safedrive. 
+with a logic to open links in safari, such as now, youtube videos.
